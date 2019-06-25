@@ -1,6 +1,7 @@
 import * as ddbGeo from '../../src';
 import * as AWS from 'aws-sdk';
 import { expect } from 'chai';
+import { IoT1ClickDevicesService } from 'aws-sdk';
 
 AWS.config.update({
   accessKeyId: 'dummy',
@@ -107,6 +108,29 @@ describe('Example', function() {
     ]);
   });
 
+  it('getPoint', async () => {
+    this.timeout(20000);
+    // Perform a radius query
+    const { Item } = await capitalsManager
+      .getPoint({
+        RangeKeyValue: { S: 'London' },
+        HashKeyValue: { S: 'United Kingdom' },
+        GetItemInput: {
+          TableName: config.tableName,
+          Key: {}
+        }
+      })
+      .promise();
+    expect(Item).to.deep.equal({
+      rangeKey: { S: 'London' },
+      country: { S: 'United Kingdom' },
+      capital: { S: 'London' },
+      hashKey: { S: 'United Kingdom' },
+      geohashKey: { N: '522' },
+      geoJson: { S: '{"type":"Point","coordinates":[-0.13,51.51]}' },
+      geohash: { N: '5221366118452580119' }
+    });
+  });
   after(async function() {
     this.timeout(10000);
     await ddb.deleteTable({ TableName: config.tableName }).promise();
