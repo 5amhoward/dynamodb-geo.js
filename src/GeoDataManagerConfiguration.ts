@@ -12,11 +12,10 @@
  * express or implied. See the License for the specific language governing
  * permissions and limitations under the License.
  */
-import { DynamoDB } from "aws-sdk";
-import { S2RegionCoverer } from "nodes2ts";
+import { DynamoDB } from 'aws-sdk';
+import { S2RegionCoverer } from 'nodes2ts';
 
 export class GeoDataManagerConfiguration {
-
   // Public constants
   static MERGE_THRESHOLD = 2;
 
@@ -25,12 +24,13 @@ export class GeoDataManagerConfiguration {
 
   consistentRead: boolean = false;
 
-  hashKeyAttributeName: string = "hashKey";
-  rangeKeyAttributeName: string = "rangeKey";
-  geohashAttributeName: string = "geohash";
-  geoJsonAttributeName: string = "geoJson";
+  hashKeyAttributeName: string = 'hashKey';
+  rangeKeyAttributeName: string = 'rangeKey';
+  geohashKeyAttributeName: string = 'geohashKey';
+  geohashAttributeName: string = 'geohash';
+  geoJsonAttributeName: string = 'geoJson';
 
-  geohashIndexName: string = "geohash-index";
+  geohashIndexName: string = 'geohash-index';
 
   hashKeyLength: number = 2;
 
