@@ -24,12 +24,14 @@ import {
   PutPointInput,
   PutPointOutput,
   UpdatePointInput,
-  UpdatePointOutput
+  UpdatePointOutput,
+  TimeWindow
 } from '../types';
 import { S2Manager } from '../s2/S2Manager';
 import { GeohashRange } from '../model/GeohashRange';
 import * as Long from 'long';
 import { PutItemInput, PutRequest } from 'aws-sdk/clients/dynamodb';
+import GeoDateHashKey from '../model/GeoDateHashKey';
 
 export class DynamoDBManager {
   private config: GeoDataManagerConfiguration;
@@ -53,16 +55,26 @@ export class DynamoDBManager {
   public async queryGeohash(
     queryInput: DynamoDB.QueryInput | undefined,
     geohashKey: Long,
+    timeWindow: TimeWindow,
     range: GeohashRange
   ): Promise<DynamoDB.QueryOutput[]> {
     const queryOutputs: DynamoDB.QueryOutput[] = [];
 
     const nextQuery = async (lastEvaluatedKey: DynamoDB.Key = null) => {
       const keyConditions: { [key: string]: DynamoDB.Condition } = {};
-
+      const queryFilter: { [key: string]: DynamoDB.Condition } = {};
+      const geoDateHashKey = GeoDateHashKey(geohashKey, timeWindow);
       keyConditions[this.config.geohashKeyAttributeName] = {
         ComparisonOperator: 'EQ',
-        AttributeValueList: [{ N: geohashKey.toString(10) }]
+        AttributeValueList: [{ S: geoDateHashKey }]
+      };
+      queryFilter[this.config.windowStartAttributeName] = {
+        ComparisonOperator: 'LT',
+        AttributeValueList: [{ S: timeWindow.start.toISOString() }]
+      };
+      queryFilter[this.config.windowEndAttributeName] = {
+        ComparisonOperator: 'GT',
+        AttributeValueList: [{ S: timeWindow.end.toISOString() }]
       };
 
       const minRange: DynamoDB.AttributeValue = {
@@ -83,7 +95,8 @@ export class DynamoDBManager {
         IndexName: this.config.geohashIndexName,
         ConsistentRead: this.config.consistentRead,
         ReturnConsumedCapacity: 'TOTAL',
-        ExclusiveStartKey: lastEvaluatedKey
+        ExclusiveStartKey: lastEvaluatedKey,
+        QueryFilter: queryFilter
       };
 
       const queryOutput = await this.config.dynamoDBClient
@@ -120,10 +133,11 @@ export class DynamoDBManager {
     putPointInput: PutPointInput
   ): Request<PutPointOutput, AWSError> {
     const geohash = S2Manager.generateGeohash(putPointInput.GeoPoint);
-    const hashKey = S2Manager.generateHashKey(
+    const geohashKey = S2Manager.generateHashKey(
       geohash,
       this.config.hashKeyLength
     );
+    const geoDateHashKey = GeoDateHashKey(geohashKey, putPointInput.TimeWindow);
     const putItemInput: PutItemInput = {
       ...putPointInput.PutItemInput,
       TableName: this.config.tableName,
@@ -134,8 +148,14 @@ export class DynamoDBManager {
       putPointInput.HashKeyValue;
     putItemInput.Item[this.config.rangeKeyAttributeName] =
       putPointInput.RangeKeyValue;
+    putItemInput.Item[this.config.windowStartAttributeName] = {
+      S: putPointInput.TimeWindow.start.toISOString()
+    };
+    putItemInput.Item[this.config.windowEndAttributeName] = {
+      S: putPointInput.TimeWindow.end.toISOString()
+    };
     putItemInput.Item[this.config.geohashKeyAttributeName] = {
-      N: hashKey.toString(10)
+      S: geoDateHashKey
     };
     putItemInput.Item[this.config.geohashAttributeName] = {
       N: geohash.toString(10)
@@ -158,9 +178,13 @@ export class DynamoDBManager {
     const writeInputs: DynamoDB.WriteRequest[] = [];
     putPointInputs.forEach(putPointInput => {
       const geohash = S2Manager.generateGeohash(putPointInput.GeoPoint);
-      const hashKey = S2Manager.generateHashKey(
+      const geohashKey = S2Manager.generateHashKey(
         geohash,
         this.config.hashKeyLength
+      );
+      const geoDateHashKey = GeoDateHashKey(
+        geohashKey,
+        putPointInput.TimeWindow
       );
       const putItemInput = putPointInput.PutItemInput;
 
@@ -172,8 +196,14 @@ export class DynamoDBManager {
         putPointInput.HashKeyValue;
       putRequest.Item[this.config.rangeKeyAttributeName] =
         putPointInput.RangeKeyValue;
+      putItemInput.Item[this.config.windowStartAttributeName] = {
+        S: putPointInput.TimeWindow.start.toISOString()
+      };
+      putItemInput.Item[this.config.windowEndAttributeName] = {
+        S: putPointInput.TimeWindow.end.toISOString()
+      };
       putRequest.Item[this.config.geohashKeyAttributeName] = {
-        N: hashKey.toString(10)
+        S: geoDateHashKey
       };
       putRequest.Item[this.config.geohashAttributeName] = {
         N: geohash.toString(10)

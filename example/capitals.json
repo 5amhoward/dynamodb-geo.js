@@ -3,312 +3,416 @@
     "country": "Albania",
     "capital": "Tirana",
     "latitude": 41.33,
-    "longitude": 19.82
+    "longitude": 19.82,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Andorra",
     "capital": "Andorra la Vella",
     "latitude": 42.51,
-    "longitude": 1.52
+    "longitude": 1.52,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Austria",
     "capital": "Vienna",
     "latitude": 48.21,
-    "longitude": 16.37
+    "longitude": 16.37,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Belarus",
     "capital": "Minsk",
     "latitude": 53.9,
-    "longitude": 27.57
+    "longitude": 27.57,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Belgium",
     "capital": "Brussels",
     "latitude": 50.85,
-    "longitude": 4.35
+    "longitude": 4.35,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Bosnia and Herzegovina",
     "capital": "Sarajevo",
     "latitude": 43.85,
-    "longitude": 18.36
+    "longitude": 18.36,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Bulgaria",
     "capital": "Sofia",
     "latitude": 42.7,
-    "longitude": 23.32
+    "longitude": 23.32,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Croatia",
     "capital": "Zagreb",
     "latitude": 45.81,
-    "longitude": 15.98
+    "longitude": 15.98,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Cyprus",
     "capital": "Nicosia",
     "latitude": 35.17,
-    "longitude": 33.37
+    "longitude": 33.37,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Czech Republic",
     "capital": "Prague",
     "latitude": 50.09,
-    "longitude": 14.42
+    "longitude": 14.42,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Denmark",
     "capital": "Copenhagen",
     "latitude": 55.68,
-    "longitude": 12.57
+    "longitude": 12.57,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Estonia",
     "capital": "Tallinn",
     "latitude": 59.44,
-    "longitude": 24.75
+    "longitude": 24.75,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Faroe Islands",
     "capital": "Tórshavn",
     "latitude": 62.01,
-    "longitude": -6.77
+    "longitude": -6.77,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Finland",
     "capital": "Helsinki",
     "latitude": 60.17,
-    "longitude": 24.94
+    "longitude": 24.94,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "France",
     "capital": "Paris",
     "latitude": 48.85,
-    "longitude": 2.35
+    "longitude": 2.35,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Germany",
     "capital": "Berlin",
     "latitude": 52.52,
-    "longitude": 13.41
+    "longitude": 13.41,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Gibraltar",
     "capital": "Gibraltar",
     "latitude": 36.14,
-    "longitude": -5.35
+    "longitude": -5.35,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Greece",
     "capital": "Athens",
     "latitude": 37.98,
-    "longitude": 23.72
+    "longitude": 23.72,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Guernsey",
     "capital": "St Peter Port",
     "latitude": 49.46,
-    "longitude": -2.54
+    "longitude": -2.54,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Hungary",
     "capital": "Budapest",
     "latitude": 47.5,
-    "longitude": 19.04
+    "longitude": 19.04,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Iceland",
     "capital": "Reykjavík",
     "latitude": 64.14,
-    "longitude": -21.9
+    "longitude": -21.9,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Ireland",
     "capital": "Dublin",
     "latitude": 53.33,
-    "longitude": -6.25
+    "longitude": -6.25,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Isle of Man",
     "capital": "Douglas",
     "latitude": 54.15,
-    "longitude": -4.48
+    "longitude": -4.48,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Italy",
     "capital": "Rome",
     "latitude": 41.89,
-    "longitude": 12.48
+    "longitude": 12.48,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Jersey",
     "capital": "Saint Helier",
     "latitude": 49.19,
-    "longitude": -2.1
+    "longitude": -2.1,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Kosovo",
     "capital": "Pristina",
     "latitude": 42.67,
-    "longitude": 21.17
+    "longitude": 21.17,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Latvia",
     "capital": "Riga",
     "latitude": 56.95,
-    "longitude": 24.11
+    "longitude": 24.11,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Liechtenstein",
     "capital": "Vaduz",
     "latitude": 47.14,
-    "longitude": 9.52
+    "longitude": 9.52,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Lithuania",
     "capital": "Vilnius",
     "latitude": 54.69,
-    "longitude": 25.28
+    "longitude": 25.28,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Luxembourg",
     "capital": "Luxembourg",
     "latitude": 49.61,
-    "longitude": 6.13
+    "longitude": 6.13,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Macedonia",
     "capital": "Skopje",
     "latitude": 42,
-    "longitude": 21.43
+    "longitude": 21.43,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Malta",
     "capital": "Valletta",
     "latitude": 35.9,
-    "longitude": 14.51
+    "longitude": 14.51,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Moldova",
     "capital": "Chişinău",
     "latitude": 47.01,
-    "longitude": 28.86
+    "longitude": 28.86,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Monaco",
     "capital": "Monaco",
     "latitude": 43.73,
-    "longitude": 7.42
+    "longitude": 7.42,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Montenegro",
     "capital": "Podgorica",
     "latitude": 42.44,
-    "longitude": 19.26
+    "longitude": 19.26,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Netherlands",
     "capital": "Amsterdam",
     "latitude": 52.37,
-    "longitude": 4.89
+    "longitude": 4.89,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Norway",
     "capital": "Oslo",
     "latitude": 59.91,
-    "longitude": 10.75
+    "longitude": 10.75,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Poland",
     "capital": "Warsaw",
     "latitude": 52.23,
-    "longitude": 21.01
+    "longitude": 21.01,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Portugal",
     "capital": "Lisbon",
     "latitude": 38.72,
-    "longitude": -9.13
+    "longitude": -9.13,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Romania",
     "capital": "Bucharest",
     "latitude": 44.43,
-    "longitude": 26.11
+    "longitude": 26.11,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Russia",
     "capital": "Moscow",
     "latitude": 55.75,
-    "longitude": 37.62
+    "longitude": 37.62,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "San Marino",
     "capital": "San Marino",
     "latitude": 43.94,
-    "longitude": 12.45
+    "longitude": 12.45,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Serbia",
     "capital": "Belgrade",
     "latitude": 44.8,
-    "longitude": 20.47
+    "longitude": 20.47,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Slovakia",
     "capital": "Bratislava",
     "latitude": 48.15,
-    "longitude": 17.11
+    "longitude": 17.11,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Slovenia",
     "capital": "Ljubljana",
     "latitude": 46.05,
-    "longitude": 14.51
+    "longitude": 14.51,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Spain",
     "capital": "Madrid",
     "latitude": 40.42,
-    "longitude": -3.7
+    "longitude": -3.7,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Svalbard and Jan Mayen",
     "capital": "Longyearbyen",
     "latitude": 78.22,
-    "longitude": 15.64
+    "longitude": 15.64,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Sweden",
     "capital": "Stockholm",
     "latitude": 59.33,
-    "longitude": 18.06
+    "longitude": 18.06,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Switzerland",
     "capital": "Berne",
     "latitude": 46.95,
-    "longitude": 7.45
+    "longitude": 7.45,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Ukraine",
     "capital": "Kiev",
     "latitude": 50.45,
-    "longitude": 30.52
+    "longitude": 30.52,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "United Kingdom",
     "capital": "London",
     "latitude": 51.51,
-    "longitude": -0.13
+    "longitude": -0.13,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   },
   {
     "country": "Vatican",
     "capital": "Vatican",
     "latitude": 41.9,
-    "longitude": 12.45
+    "longitude": 12.45,
+    "from": "2019-06-27T11:00:36.969Z",
+    "to": "2019-06-28T11:00:36.969Z"
   }
 ]

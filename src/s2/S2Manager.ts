@@ -13,9 +13,9 @@
  * permissions and limitations under the License.
  */
 
-import { S2Cell, S2LatLng } from "nodes2ts";
-import { GeoPoint } from "../types";
-import * as Long from "long";
+import { S2Cell, S2LatLng } from 'nodes2ts';
+import { GeoPoint } from '../types';
+import * as Long from 'long';
 
 export class S2Manager {
   static generateGeohash(geoPoint: GeoPoint) {

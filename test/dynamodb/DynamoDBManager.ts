@@ -44,11 +44,13 @@ describe('DynamoDBManager.putPoint', () => {
             Item: {
               geoJson: { S: '{"type":"Point","coordinates":[-0.13,51.51]}' },
               geohash: { N: '5221366118452580119' },
-              geohashKey: { N: '52' },
+              geohashKey: { S: '20192652' },
               rangeKey: { S: 'touareg' },
               hashKey: { S: 'sam' },
               country: { S: 'UK' },
-              capital: { S: 'London' }
+              capital: { S: 'London' },
+              from: { S: '2019-06-26T11:00:36.969Z' },
+              to: { S: '2019-06-27T11:00:36.969Z' }
             },
             ConditionExpression: 'attribute_not_exists(capital)'
           });
@@ -65,6 +67,10 @@ describe('DynamoDBManager.putPoint', () => {
         // An object specifying latitutde and longitude as plain numbers. Used to build the geohash, the hashkey and geojson data
         latitude: 51.51,
         longitude: -0.13
+      },
+      TimeWindow: {
+        start: new Date('2019-06-26T11:00:36.969Z'),
+        end: new Date('2019-06-27T11:00:36.969Z')
       },
       HashKeyValue: { S: 'sam' },
       PutItemInput: {

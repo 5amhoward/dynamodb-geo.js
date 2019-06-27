@@ -29,6 +29,8 @@ export class GeoDataManagerConfiguration {
   geohashKeyAttributeName: string = 'geohashKey';
   geohashAttributeName: string = 'geohash';
   geoJsonAttributeName: string = 'geoJson';
+  windowStartAttributeName: string = 'from';
+  windowEndAttributeName: string = 'to';
 
   geohashIndexName: string = 'geohash-index';
 

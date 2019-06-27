@@ -60,7 +60,7 @@ export class GeoTableUtil {
         { AttributeName: config.hashKeyAttributeName, AttributeType: 'S' },
         { AttributeName: config.rangeKeyAttributeName, AttributeType: 'S' },
         { AttributeName: config.geohashAttributeName, AttributeType: 'N' },
-        { AttributeName: config.geohashKeyAttributeName, AttributeType: 'N' }
+        { AttributeName: config.geohashKeyAttributeName, AttributeType: 'S' }
       ],
       GlobalSecondaryIndexes: [
         {

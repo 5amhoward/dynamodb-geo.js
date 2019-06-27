@@ -14,8 +14,13 @@ export interface GeoPoint {
   latitude: number;
   longitude: number;
 }
+export interface TimeWindow {
+  start: Date;
+  end: Date;
+}
 export interface GeoQueryInput {
   QueryInput?: DynamoDB.QueryInput;
+  TimeWindow: TimeWindow;
 }
 export interface GeoQueryOutput extends DynamoDB.QueryOutput {}
 export interface GetPointInput {
@@ -29,6 +34,7 @@ export interface PutPointInput {
   RangeKeyValue: DynamoDB.AttributeValue;
   HashKeyValue: DynamoDB.AttributeValue;
   GeoPoint: GeoPoint;
+  TimeWindow: TimeWindow;
   PutItemInput: DynamoDB.PutRequest;
 }
 export interface PutPointOutput extends DynamoDB.PutItemOutput {}

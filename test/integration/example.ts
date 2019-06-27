@@ -42,6 +42,11 @@ describe('Example', function() {
           latitude: capital.latitude,
           longitude: capital.longitude
         },
+        TimeWindow: {
+          start: new Date(capital.from),
+          end: new Date(capital.to)
+        },
+
         PutItemInput: {
           Item: {
             country: { S: capital.country },
@@ -89,28 +94,39 @@ describe('Example', function() {
     // Perform a radius query
     const result = await capitalsManager.queryRadius({
       RadiusInMeter: 100000,
+      TimeWindow: {
+        start: new Date('2019-06-28T11:00:36.969Z'),
+        end: new Date('2019-06-31T11:00:36.969Z')
+      },
       CenterPoint: {
         latitude: 52.22573,
         longitude: 0.149593
       }
     });
+    // expect no result as outside time window
+    expect(result).to.deep.equal([]);
+  });
 
-    expect(result).to.deep.equal([
-      {
-        rangeKey: { S: 'London' },
-        country: { S: 'United Kingdom' },
-        capital: { S: 'London' },
-        hashKey: { S: 'United Kingdom' },
-        geohashKey: { N: '522' },
-        geoJson: { S: '{"type":"Point","coordinates":[-0.13,51.51]}' },
-        geohash: { N: '5221366118452580119' }
+  it('queryRadius', async function() {
+    this.timeout(20000);
+    // Perform a radius query
+    const result = await capitalsManager.queryRadius({
+      RadiusInMeter: 100000,
+      TimeWindow: {
+        start: new Date('2019-06-27T11:00:36.969Z'),
+        end: new Date('2019-06-28T11:00:36.969Z')
+      },
+      CenterPoint: {
+        latitude: 52.22573,
+        longitude: 0.149593
       }
-    ]);
+    });
+    // expect no result as outside time window
+    expect(result).to.deep.equal([]);
   });
 
   it('getPoint', async () => {
     this.timeout(20000);
-    // Perform a radius query
     const { Item } = await capitalsManager
       .getPoint({
         RangeKeyValue: { S: 'London' },
@@ -126,9 +142,11 @@ describe('Example', function() {
       country: { S: 'United Kingdom' },
       capital: { S: 'London' },
       hashKey: { S: 'United Kingdom' },
-      geohashKey: { N: '522' },
+      geohashKey: { S: '201926522' },
       geoJson: { S: '{"type":"Point","coordinates":[-0.13,51.51]}' },
-      geohash: { N: '5221366118452580119' }
+      geohash: { N: '5221366118452580119' },
+      from: { S: '2019-06-27T11:00:36.969Z' },
+      to: { S: '2019-06-28T11:00:36.969Z' }
     });
   });
   after(async function() {
