@@ -14,6 +14,7 @@ export default function getGeoDateHash(
   timeWindow: TimeWindow
 ): string {
   const week = getWeekNumber(timeWindow.start);
+  const weekString = `0${week}`.slice(-2);
   const year = timeWindow.start.getFullYear();
-  return `${year.toString()}${week.toString()}${geoHashKey.toString()}`;
+  return `${year.toString()}${weekString}${geoHashKey.toString()}`;
 }
